@@ -1,4 +1,5 @@
 // disable right click
+/*
 document.addEventListener('contextmenu', event => event.preventDefault());
 
 document.onkeydown = function (e) {
@@ -23,6 +24,7 @@ document.onkeydown = function (e) {
         return false;
     }
 }
+*/
 
 function activeClass(id) {
     let collection = document.getElementsByClassName('all');
