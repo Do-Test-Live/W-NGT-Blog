@@ -41,6 +41,7 @@ body {
 }
 
 .ngt-logo {
+    position: absolute;
     width: 120px;
 }
 
@@ -67,13 +68,19 @@ body {
 .ngt-header-section-outer {
     border-image: url('../images/glow/nav.png') 105;
     border-style: solid;
-    border-width: 0 0 60px 0;
+    border-width: 0 0 90px 0;
     position: relative;
     z-index: 1;
 }
 
+.blog-details-slider{
+    background-image: url("../images/glow/glow.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
 .ngt-demo{
-    margin-top: -30px;
     background-size: cover;
     opacity: 0.9;
     background: url("../images/bg/bg.png") no-repeat fixed;
@@ -83,12 +90,6 @@ body {
     font-family: 'OrbitronBlack', sans-serif;
     color: white;
     font-size: 22px;
-}
-
-.ngt-nav-outer{
-    border-image: url('../images/bg/border.png') 65;
-    border-style: solid;
-    border-width: 60px 40px 50px 60px;
 }
 
 
@@ -111,15 +112,6 @@ ul.ngt-nav-list li a{
     color: white !important;
     font-size: 18px;
     text-decoration: none;
-}
-
-.ngt-demo-outer{
-    background: url("../images/glow/without-glow.png") no-repeat;
-    background-size: contain;
-    height: 190px;
-    width: 320px;
-    padding: 0.75em 2em;
-    margin: auto;
 }
 
 .ngt-demo-outer img{
