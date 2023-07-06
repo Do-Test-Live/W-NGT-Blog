@@ -92,6 +92,24 @@ body {
     font-size: 22px;
 }
 
+.ngt-slider::before {
+    content: "";
+    background-image: url(../images/slider/left.png);
+    top: 50%;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+}
+.ngt-slider::after {
+    content: "";
+    background-image: url(../images/slider/right.png);
+    top: 50%;
+    right: 0;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+}
 
 .ngt-nav-inner{
     background: rgba(2, 24, 85, 0.75);
@@ -197,11 +215,27 @@ ul.ngt-nav-list li span {
     font-family: 'JuraBold',sans-serif;
     height: 68px;
     width: 190px;
+    padding-top: 20px;
     text-align: left;
     border: unset;
     background: transparent url("../images/button/button.png") no-repeat;
     color: white;
     font-size: 17px;
+    letter-spacing: 2px;
+    text-shadow: 2px 0 2px rgba(255, 255, 255, 1), -2px 0 2px rgba(255, 255, 255, 1), 0 1px 2px rgba(0, 234, 255, 1), 0 -1px 2px rgba(0, 234, 255, 1);
+}
+
+.ngt-blog-btn-back{
+    font-family: 'JuraBold',sans-serif;
+    height: 68px;
+    width: 190px;
+    text-align: right;
+    padding-top: 15px;
+    padding-right: 50px;
+    border: unset;
+    background: transparent url("../images/button/button2.png") no-repeat;
+    color: white;
+    font-size: 20px;
     letter-spacing: 2px;
     text-shadow: 2px 0 2px rgba(255, 255, 255, 1), -2px 0 2px rgba(255, 255, 255, 1), 0 1px 2px rgba(0, 234, 255, 1), 0 -1px 2px rgba(0, 234, 255, 1);
 }
@@ -214,8 +248,36 @@ ul.ngt-nav-list li span {
     background: transparent url("../images/button/button.png") no-repeat;
 }
 
+.ngt-blog-btn-back:hover{
+    height: 68px;
+    width: 190px;
+    text-align: right;
+    border: unset;
+    background: transparent url("../images/button/button2.png") no-repeat;
+}
+
 @media only screen and (max-width: 550px) {
+    .container-fluid{
+        --bs-gutter-x: 0.5rem;
+    }
+
+    .ngt-header-section-outer {
+        border-image: url('../images/glow/nav.png') 105;
+        border-style: solid;
+        border-width: 0 0 35px 0;
+        position: relative;
+        z-index: 1;
+    }
+
+    .blog-details-slider{
+        background-image: url("../images/glow/glow-mobile.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+    }
+
     .ngt-logo{
+        position: inherit;
         width: 80px;
         padding-left: 4px !important;
     }
@@ -224,5 +286,15 @@ ul.ngt-nav-list li span {
         padding-right: unset;
         font-size: 26px;
         margin-right: unset !important;
+    }
+
+    .ngt-footer-outer {
+        height: 115px;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        border-image: url(../images/bg/footer.png) 70;
+        border-style: solid;
+        border-width: 0 0 40px 0;
     }
 }
