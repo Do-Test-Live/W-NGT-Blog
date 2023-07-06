@@ -92,6 +92,10 @@ body {
     font-size: 22px;
 }
 
+.ngt-slider {
+    cursor: pointer;
+}
+
 .ngt-slider::before {
     content: "";
     background-image: url(../images/slider/left.png);
@@ -100,6 +104,7 @@ body {
     height: 50px;
     width: 50px;
     position: absolute;
+    z-index: 99;
 }
 .ngt-slider::after {
     content: "";
@@ -109,6 +114,7 @@ body {
     height: 50px;
     width: 50px;
     position: absolute;
+    z-index: 99;
 }
 
 .ngt-nav-inner{
