@@ -92,6 +92,7 @@ body {
     font-size: 22px;
 }
 
+/*
 .ngt-slider {
     cursor: pointer;
 }
@@ -115,7 +116,7 @@ body {
     width: 50px;
     position: absolute;
     z-index: 99;
-}
+}*/
 
 .ngt-nav-inner{
     background: rgba(2, 24, 85, 0.75);
@@ -262,7 +263,64 @@ ul.ngt-nav-list li span {
     background: transparent url("../images/button/button2.png") no-repeat;
 }
 
+.owl-carousel {
+    margin-bottom: 30px;
+}
+.owl-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.owl-carousel {
+    position: relative;
+}
+
+
+.owl-nav {
+    width: 50px;
+}
+
+.owl-nav .owl-prev,
+.owl-nav .owl-next {
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.owl-nav .owl-prev{
+    position: absolute;
+    top: 40%;
+    left: -45px;
+}
+
+.owl-prev img, .owl-next img{
+    width: 50px;
+    height: 50px;
+}
+
+.owl-nav .owl-next{
+    position: absolute;
+    top: 40%;
+    right: -55px;
+}
+
 @media only screen and (max-width: 550px) {
+    .owl-nav .owl-prev{
+        position: absolute;
+        top: 40%;
+        left: -45px;
+    }
+
+    .owl-nav .owl-next{
+        position: absolute;
+        top: 40%;
+        right: -30px;
+    }
+
+
     .container-fluid{
         --bs-gutter-x: 0.5rem;
     }

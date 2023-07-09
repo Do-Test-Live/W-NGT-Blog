@@ -53,7 +53,7 @@
                     Lorem Ipsum is simply dummy text <br/>
                     of the printing and typesetting industry
                 </p>
-                <a href="blog_details.html" class="btn btn-primary ngt-blog-btn mt-3">
+                <a href="blog-details.php" class="btn btn-primary ngt-blog-btn mt-3">
                     See More
                 </a>
             </div>
@@ -64,7 +64,7 @@
                     Lorem Ipsum is simply dummy text <br/>
                     of the printing and typesetting industry
                 </p>
-                <a href="blog_details.html" class="btn btn-primary ngt-blog-btn mt-3">
+                <a href="blog-details.php" class="btn btn-primary ngt-blog-btn mt-3">
                     See More
                 </a>
             </div>
@@ -75,7 +75,7 @@
                     Lorem Ipsum is simply dummy text <br/>
                     of the printing and typesetting industry
                 </p>
-                <a href="blog_details.html" class="btn btn-primary ngt-blog-btn mt-3">
+                <a href="blog-details.php" class="btn btn-primary ngt-blog-btn mt-3">
                     See More
                 </a>
             </div>
