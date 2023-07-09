@@ -37,7 +37,7 @@ if(isset($_POST['update_blog'])){
 
             move_uploaded_file($file_tmp, "../assets/images/blog/" .$file_name);
             $image = "assets/images/blog/" . $file_name;
-            $query.=",`image`=".$image;
+            $query.=",`image`='".$image."'";
         }
     }
 
@@ -46,12 +46,12 @@ if(isset($_POST['update_blog'])){
     if($update){
         echo "<script>
                 alert('Success');
-                window.location.href='blog-details.php';
+                window.location.href='blog.php';
                 </script>";
     }else{
         echo "<script>
                 alert('Fail');
-                window.location.href='blog-details.php+';
+                window.location.href='blog.php+';
                 </script>";
     }
 }

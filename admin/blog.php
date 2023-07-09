@@ -14,7 +14,7 @@ $db_handle = new DBController();
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Blog - NEXT INFO TECH</title>
+    <title>Blog - NGT Blog</title>
 
     <?php require_once 'include/css.php'; ?>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>

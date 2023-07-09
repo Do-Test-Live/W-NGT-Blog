@@ -6,7 +6,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">NEXT INFO TECH</div>
+        <div class="sidebar-brand-text mx-3">NGT Blog</div>
     </a>
 
     <!-- Divider -->
@@ -37,8 +37,6 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Data:</h6>
-                <a class="collapse-item" href="registration.php">Contact Data</a>
-                <a class="collapse-item" href="blog-category.php">Blog Category</a>
                 <a class="collapse-item" href="blog.php">Blog Data</a>
             </div>
         </div>

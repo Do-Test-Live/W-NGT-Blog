@@ -14,7 +14,7 @@ $db_handle = new DBController();
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Add Blog - NEXT INFO TECH</title>
+    <title>Add Blog - NGT Blog</title>
 
     <?php require_once 'include/css.php'; ?>
 

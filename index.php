@@ -1,3 +1,7 @@
+<?php
+include('include/dbController.php');
+$db_handle = new DBController();
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -46,39 +50,26 @@
 <section class="ngt-demo pb-5">
     <div class="container pt-5 pb-5">
         <div class="row pb-5">
+            <?php
+            $query = "SELECT * FROM blog order by id desc";
+            $data = $db_handle->runQuery($query);
+            $row_count = $db_handle->numRows($query);
+            for ($i = 0; $i < $row_count; $i++) {
+            ?>
+
             <div class="col-lg-4 pb-3 text-center">
-                <img alt="" class="img-fluid" src="assets/images/blog/blog_1.png"/>
-                <h4 class="text-center mt-4 ngt-demo-title">TITLE</h4>
+                <img alt="" class="img-fluid" src="<?php echo $data[$i]["image"]; ?>"/>
+                <h4 class="text-center mt-4 ngt-demo-title"><?php echo $data[$i]["title"]; ?></h4>
                 <p class="text-white ngt-blog-content">
-                    Lorem Ipsum is simply dummy text <br/>
-                    of the printing and typesetting industry
+                    <?php echo $data[$i]["meta_description"]; ?>
                 </p>
-                <a href="blog-details.php" class="btn btn-primary ngt-blog-btn mt-3">
+                <a href="Blog-Details/<?php echo $data[$i]["meta_title"]; ?>" class="btn btn-primary ngt-blog-btn mt-3">
                     See More
                 </a>
             </div>
-            <div class="col-lg-4 pb-3 text-center">
-                <img alt="" class="img-fluid" src="assets/images/blog/blog_2.png"/>
-                <h4 class="text-center mt-4 ngt-demo-title">TITLE</h4>
-                <p class="text-white ngt-blog-content">
-                    Lorem Ipsum is simply dummy text <br/>
-                    of the printing and typesetting industry
-                </p>
-                <a href="blog-details.php" class="btn btn-primary ngt-blog-btn mt-3">
-                    See More
-                </a>
-            </div>
-            <div class="col-lg-4 pb-3 text-center">
-                <img alt="" class="img-fluid" src="assets/images/blog/blog_3.png"/>
-                <h4 class="text-center mt-4 ngt-demo-title">TITLE</h4>
-                <p class="text-white ngt-blog-content">
-                    Lorem Ipsum is simply dummy text <br/>
-                    of the printing and typesetting industry
-                </p>
-                <a href="blog-details.php" class="btn btn-primary ngt-blog-btn mt-3">
-                    See More
-                </a>
-            </div>
+            <?php
+            }
+            ?>
         </div>
     </div>
 </section>
