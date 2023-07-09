@@ -1,0 +1,8 @@
+RewriteEngine on
+
+RewriteRule ^Home index.php [NE,L]
+
+RewriteRule ^Blog\-Details(.*) blog-details.php$1
+
+
+
