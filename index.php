@@ -51,7 +51,7 @@ $db_handle = new DBController();
     <div class="container pt-5 pb-5">
         <div class="row pb-5">
             <?php
-            $query = "SELECT * FROM blog order by id desc";
+            $query = "SELECT * FROM blog order by id asc";
             $data = $db_handle->runQuery($query);
             $row_count = $db_handle->numRows($query);
             for ($i = 0; $i < $row_count; $i++) {
@@ -63,7 +63,7 @@ $db_handle = new DBController();
                 <p class="text-white ngt-blog-content">
                     <?php echo $data[$i]["meta_description"]; ?>
                 </p>
-                <a href="Blog-Details/<?php echo $data[$i]["meta_title"]; ?>" class="btn btn-primary ngt-blog-btn mt-3">
+                <a href="Blog-Details/<?php echo str_replace(" ", "-", $data[$i]["meta_title"]); ?>" class="btn btn-primary ngt-blog-btn mt-3">
                     See More
                 </a>
             </div>
