@@ -50,7 +50,7 @@ $db_handle = new DBController();
                     <h1 class="h3 mb-2 text-gray-800">Edit Blog</h1>
 
                     <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
+                    <div class="card shadow mb-4" style="background:#0b0b0b;">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Edit Blog</h6>
                         </div>
@@ -117,7 +117,7 @@ $db_handle = new DBController();
                     <h1 class="h3 mb-2 text-gray-800">Blog Data</h1>
 
                     <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
+                    <div class="card shadow mb-4" style="background:#0b0b0b;">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Blog Data</h6>
                         </div>

@@ -5,7 +5,7 @@ $db_handle = new DBController();
 $url = $_SERVER['REQUEST_URI'];
 $title = substr($url, strrpos($url, '/') + 1);
 $title = strtok($title, '?');
-$string = str_replace("-", " ", $title);
+$string = urldecode(str_replace("-", " ", $title));
 
 $extension = '../';
 $bcName = '';
@@ -52,7 +52,7 @@ if ($row == 0) {
     <meta content="https://blog.ngt.hk" property="og:url"/>
     <meta content="website" property="og:type"/>
 
-    <title><?php echo $meta_title; ?></title>
+    <title><?php echo $string; ?></title>
     <link href="<?php echo $extension; ?>assets/images/logo/favicon.ico" rel="icon" type="image/x-icon">
 
     <link href="<?php echo $extension; ?>assets/vendor/Bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
@@ -65,6 +65,31 @@ if ($row == 0) {
             location.replace(`https:${location.href.substring(location.protocol.length)}`);
         }
     </script>
+
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+            margin-left: 15px;
+            width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey;
+            border-radius: 10px;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #00eaff;
+            border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #05949f;
+        }
+    </style>
 </head>
 <body>
 
@@ -81,7 +106,7 @@ if ($row == 0) {
 
 
 <section class="ngt-demo pb-5">
-    <section class="container pt-5 pb-5">
+    <section class="container pt-3 pb-5">
         <div class="owl-carousel">
             <?php
             $query = "SELECT * FROM blog where meta_title='$string'";
@@ -112,8 +137,8 @@ if ($row == 0) {
                         </div>
                         <div class="col-lg-5 pb-3">
                             <h4 class="ngt-demo-title"><?php echo $data[$i]["title"]; ?></h4>
-                            <div class="text-white">
-                                <?php echo strip_tags($data[$i]["description"],'<p>'); ?>
+                            <div class="text-white" style="height: 55vh;overflow: auto">
+                                <?php echo $data[$i]["description"]; ?>
                             </div>
                             <div class="text-end">
                                 <a class="btn btn-primary ngt-blog-btn-back mt-3" href="<?php echo $extension; ?>Home">
@@ -155,8 +180,8 @@ if ($row == 0) {
                         </div>
                         <div class="col-lg-5 pb-3">
                             <h4 class="ngt-demo-title"><?php echo $data[$i]["title"]; ?></h4>
-                            <div class="text-white">
-                                <?php echo strip_tags($data[$i]["description"],'<p>'); ?>
+                            <div class="text-white" style="height: 55vh;overflow: auto">
+                                <?php echo $data[$i]["description"]; ?>
                             </div>
                             <div class="text-end">
                                 <a class="btn btn-primary ngt-blog-btn-back mt-3" href="<?php echo $extension; ?>Home">
@@ -188,7 +213,7 @@ if ($row == 0) {
             nav: true,
             dots: true,
             autoplay: false,
-            autoplayTimeout: 5000,
+            autoplayTimeout: 500000,
             autoplayHoverPause: true,
             navText: [
                 "<img src='<?php echo $extension; ?>assets/images/slider/left.png'>",

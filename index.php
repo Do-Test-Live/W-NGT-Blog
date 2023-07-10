@@ -48,10 +48,11 @@ $db_handle = new DBController();
 </header>
 
 <section class="ngt-demo pb-5">
+    <div class="pb-5">
     <div class="container pt-5 pb-5">
         <div class="row pb-5">
             <?php
-            $query = "SELECT * FROM blog order by id asc";
+            $query = "SELECT * FROM blog order by id desc";
             $data = $db_handle->runQuery($query);
             $row_count = $db_handle->numRows($query);
             for ($i = 0; $i < $row_count; $i++) {
@@ -71,6 +72,7 @@ $db_handle = new DBController();
             }
             ?>
         </div>
+    </div>
     </div>
 </section>
 

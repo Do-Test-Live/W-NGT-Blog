@@ -81,9 +81,10 @@ body {
 }
 
 .ngt-demo{
-    background-size: cover;
+    height: 100vh;
     opacity: 0.9;
-    background: url("../images/bg/bg.png") no-repeat fixed;
+    background: url("../images/bg/BG.webp") no-repeat fixed;
+    background-size: cover;
 }
 
 .ngt-nav-title{
@@ -91,32 +92,6 @@ body {
     color: white;
     font-size: 22px;
 }
-
-/*
-.ngt-slider {
-    cursor: pointer;
-}
-
-.ngt-slider::before {
-    content: "";
-    background-image: url(../images/slider/left.png);
-    top: 50%;
-    left: 0;
-    height: 50px;
-    width: 50px;
-    position: absolute;
-    z-index: 99;
-}
-.ngt-slider::after {
-    content: "";
-    background-image: url(../images/slider/right.png);
-    top: 50%;
-    right: 0;
-    height: 50px;
-    width: 50px;
-    position: absolute;
-    z-index: 99;
-}*/
 
 .ngt-nav-inner{
     background: rgba(2, 24, 85, 0.75);

@@ -1,8 +1,9 @@
+<IfModule mod_headers.c>
+Header set Cache-Control "private"
+</IfModule>
+
 RewriteEngine on
 
 RewriteRule ^Home index.php [NE,L]
 
 RewriteRule ^Blog\-Details(.*) blog-details.php$1
-
-
-
