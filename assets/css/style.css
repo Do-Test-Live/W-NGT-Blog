@@ -284,9 +284,9 @@ ul.ngt-nav-list li span {
 
 @media only screen and (max-width: 550px) {
     .ngt-demo{
-        height: 200vh;
+        height: unset;
         opacity: 0.9;
-        background: url("../images/bg/BG.webp") no-repeat fixed;
+        background: url("../images/bg/mbl-bg.webp") no-repeat fixed;
         background-size: cover;
     }
 
